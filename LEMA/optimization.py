@@ -5,8 +5,10 @@ from stage import Stage
 from projectile import Projectile
 from experiment import Experiment
 
-magnetType = "50mm"
+magnetType = "50mm"     # Type of magnet used, 50mm or 2x20mm
+initialSpeed = 3.0      # Initial speed of projectile
 
+# Helper method for setting up experiment
 def setupExperiment(param):
     turns = 100*param[0]
     startPos = 1e-2*param[1]
@@ -14,7 +16,7 @@ def setupExperiment(param):
     # Set up experiment
     proj = Projectile(type=magnetType, 
                       x0=startPos, 
-                      xdot0=0)
+                      xdot0=initialSpeed)
     stages = [Stage(n=turns,
                     gap=proj.gap(),
                     dx=-10e-2,

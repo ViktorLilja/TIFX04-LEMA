@@ -7,7 +7,7 @@ from experiment import Experiment
 magnetType = "50mm"
 
 startPos = -3.36e-2
-turns = 500
+turns = 665
 
 # Set up experiment
 proj = Projectile(type=magnetType, x0=startPos, xdot0=0.1)
@@ -43,7 +43,6 @@ plt.show()
 
 plt.subplot(2,1,1)
 plt.title("Energy accounting")
-print(experiment.getCapacitorEnergy())
 plt.plot(1000*t, experiment.getCapacitorEnergy())
 plt.plot(1000*t, experiment.getInductorEnergy())
 plt.plot(1000*t, experiment.getKineticEnergy())

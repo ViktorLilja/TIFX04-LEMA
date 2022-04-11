@@ -12,7 +12,7 @@ def length(n):
     return 5.26e-3 * d**2 * (d+15)
 
 # Resistance of coil pair [Ohm]
-def resistance(n): return 0.067 * 2 * length(n)
+def resistance(n): return 0.06102 * 2 * length(n)
 
 # Inductance of coil pair [H]
 def inductance(gap, n): 
