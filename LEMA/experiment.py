@@ -75,6 +75,10 @@ class Experiment:
         
         return self.result.y[1,:]
 
+    def getFinalVelocity(self):
+        v = self.getSpeed()
+        return v[-1]
+
     def getVoltage(self, stageNumber):
         if self.result is None: 
             print("Warning: returned None, call LEMA.simulate() before accessing values")
