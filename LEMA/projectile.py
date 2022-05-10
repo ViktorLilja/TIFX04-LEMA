@@ -1,3 +1,6 @@
+# Projectile class, contains parameters relating to a specific
+# type of permanent magnet projectile
+
 import numpy as np
 
 # Vacuum permeability

@@ -1,14 +1,17 @@
+# Example code demonstrating how to simulate one accelerator stage
+
 import matplotlib.pyplot as plt
 import numpy as np
 from stage import Stage
 from projectile import Projectile
 from experiment import Experiment
 
+# Settings
 magnetType = "50mm"     # Type of magnet used, 50mm or 2x20mm
-initialSpeed = 0.0      # Initial speed of projectile
+initialSpeed = 0      # Initial speed of projectile
 
-startPos = -3.36e-2     # Position of projectile relative to coil
-turns = 665             # Turns of wire in coil
+startPos = -3.5e-2      # Position of projectile relative to coil
+turns = 670             # Turns of wire in coil
 
 # Set up experiment
 proj = Projectile(type=magnetType, x0=startPos, xdot0=initialSpeed)
@@ -26,7 +29,7 @@ print("Resistance: %.2f Ohm" % (stages[0].R))
 experiment.simulate()
 t = experiment.getTime()
 v = experiment.getSpeed()
-print("Efficiency: %.1f%%" % (100*experiment.getEfficiency()))
+print("Efficiency: %.2f%%" % (100*experiment.getEfficiency()))
 
 # Plot
 plt.subplot(2,1,1)

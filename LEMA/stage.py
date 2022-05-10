@@ -1,3 +1,6 @@
+# Stage class, contains parameters for an accelerator stage
+# (coil and electrical circuit)
+
 import numpy as np
 
 # Vacuum permeability
@@ -13,6 +16,7 @@ def length(n):
 
 # Resistance of coil pair [Ohm]
 def resistance(n): return 0.06102 * 2 * length(n)
+#def resistance(n): return 0.065 * 2 * length(n)    # New wire approx
 
 # Inductance of coil pair [H]
 def inductance(gap, n): 

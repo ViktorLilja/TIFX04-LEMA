@@ -1,3 +1,5 @@
+# Finds optimal coil parameters for one specifiv initial velocity
+
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import minimize
@@ -6,7 +8,7 @@ from projectile import Projectile
 from experiment import Experiment
 
 magnetType = "50mm"     # Type of magnet used, 50mm or 2x20mm
-initialSpeed = 3.0      # Initial speed of projectile
+initialSpeed = 0.0      # Initial speed of projectile
 
 # Helper method for setting up experiment
 def setupExperiment(param):
@@ -33,7 +35,7 @@ def minus_efficiency(param):
 
     # Get results
     effiency = experiment.getEfficiency()
-    print("Turns: %.2f, Startpos %.3f cm, Efficiency: %.1f%%" % 
+    print("Turns: %.2f, Startpos %.3f cm, Efficiency: %.2f%%" % 
          (100*param[0], param[1], 100*effiency))
     return -effiency
 

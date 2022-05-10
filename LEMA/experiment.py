@@ -1,3 +1,5 @@
+# Experiment class, runs an experiment using given coil and projectile
+
 import numpy as np
 from scipy.integrate import solve_ivp
 from stage import Stage
@@ -28,7 +30,7 @@ class Experiment:
         # vec_uC:   vector of capacitor voltages for all stages
         # vec_I:    vector of coil currents for all stages
 
-        # Prepating empty arrays
+        # Preparing empty arrays
         n = len(self.stages)
         x0 = np.zeros(shape=(1,))
         xdot0 = np.zeros(shape=(1,))

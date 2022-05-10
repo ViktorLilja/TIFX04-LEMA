@@ -1,6 +1,11 @@
+# Calculate coil parameters given numer of turns
+
 import math
 
-n = 362     # Number of turns
+#    SP1 SP2 SP3 SP4 SP5
+# n  668 470 358 313 274
+# v0 0.0 3.1 5.6 7.0 8.5
+n   = 668     # Number of turns
 A_c = 0.6   # [mm2] Effective wire area
 r   = 7.5   # [mm] Inner radius of coil
 
